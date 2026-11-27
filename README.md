@@ -30,7 +30,7 @@ files/                   # CV 등 PDF 파일 (예: files/cv.pdf)
   연도별 묶기·최신순 정렬·본인 이름 굵게는 자동입니다. 같은 연도 안에서는 파일에 적힌 순서대로 표시됩니다.
   화면 표시용 추가 필드(`url`, `venue`, `index`, `corresponding`, `equal`, `title_ko`, `dataset`, `status`) 설명은 파일 맨 위 주석에 있습니다.
 - **Accepted 논문**: 출판 전 논문은 `status = {accepted}` 를 넣으면 맨 위 [Accepted] 그룹에 표시됩니다. 출판되면 `status` 줄만 삭제.
-- **논문 링크**: 해당 BibTeX 항목에 `url = {https://...}` 를 넣으면 제목이 링크가 됩니다.
+- **논문 링크**: BibTeX 항목에 `doi = {10.xxxx/...}` 를 넣으면 제목이 `https://doi.org/...` 로 연결됩니다. `url = {https://...}` 이 있으면 doi 보다 url 이 우선합니다.
 - **섹션 추가/삭제/순서 변경**: `index.html` 의 `<section id="..." data-src="sections/....html">` 와 상단 메뉴(`nav-links`)를 함께 수정.
 - **프로필(사진·이름·이메일·Scholar)**: `index.html` 의 `<aside class="sidebar">`. 사진 파일은 `assets/img/profile.jpg` (정사각형 권장).
 

@@ -11,7 +11,9 @@
 % - Google Scholar 등에서 복사한 BibTeX에 아래 "표시용 필드"만 추가하면 됩니다.
 %
 % 표시용 필드 (BibTeX 표준 아님, 모두 선택):
-%   url           = 제목에 걸 링크. 없으면 제목이 링크 없이 표시됩니다.
+%   url           = 제목에 걸 링크.
+%   (doi)         = BibTeX 표준 필드. url 이 없으면 https://doi.org/<doi> 로 제목에 링크.
+%                   url 과 doi 가 둘 다 있으면 url 을 씁니다. 둘 다 없으면 링크 없이 표시.
 %   venue         = 화면에 보일 학회/저널 표기 (예: {INTERSPEECH '26}).
 %                   없으면 journal 또는 booktitle 을 그대로 씁니다.
 %   index         = 저널 등급 정보. venue 뒤 괄호 안에 표시 (예: {SCIE, JCR 2025 IF=8.0, ...}).
@@ -23,12 +25,12 @@
 %
 % Accepted 논문 예시 (맨 앞 % 를 지우고 내용을 바꿔서 사용):
 % @inproceedings{lee2027example,
-%   title         = {Example Paper Title},
-%   author        = {Lee, Juyeob and Park, Eunil},
-%   year          = {2027},
-%   venue         = {ACL '27},
+%   title = {Example Paper Title},
+%   author = {Lee, Juyeob and Park, Eunil},
+%   year = {2027},
+%   venue = {ACL '27},
 %   corresponding = {Park, Eunil},
-%   status        = {accepted},
+%   status = {accepted},
 % }
 % ==================================================================
 
@@ -36,126 +38,127 @@
 % ----------------------------- 2026 -----------------------------
 
 @inproceedings{kim2026temporal,
-  title         = {Temporal Transition-Aware Multi-Head Modeling for Partially Spoofed Audio Detection and Localization},
-  author        = {Kim, Yunsu and Lee, Juyeob and Park, Eunil},
-  year          = {2026},
-  venue         = {INTERSPEECH '26},
-  corresponding = {Park, Eunil},
+  title = {Temporal Transition-Aware Multi-Head Modeling for Partially Spoofed Audio Detection and Localization},
+  author = {Kim, Yunsu and Lee, Juyeob and Park, Eunil},
+  year = {2026},
+  venue = {INTERSPEECH '26},
+  doi = {10.21437/Interspeech.2026-474},
 }
 
 @inproceedings{yang2026kdialect,
-  title         = {K-DIALECT: Korean Dialect-Aware Face-Based Speech Synthesis},
-  author        = {Yang, Seongyeon and Lee, Juyeob and Park, Eunil},
-  year          = {2026},
-  venue         = {INTERSPEECH '26},
+  title = {K-DIALECT: Korean Dialect-Aware Face-Based Speech Synthesis},
+  author = {Yang, Seongyeon and Lee, Juyeob and Park, Eunil},
+  year = {2026},
+  venue = {INTERSPEECH '26},
   corresponding = {Lee, Juyeob and Park, Eunil},
+  doi = {10.21437/Interspeech.2026-616},
 }
 
 @inproceedings{han2026fedamb,
-  title         = {FedAMB: Adaptive Modality Balancing for Dominance-Robust Multimodal Federated Distillation},
-  author        = {Han, Seungjin and Lee, Juyeob and Lee, Sangmin and Park, Eunil},
-  year          = {2026},
-  venue         = {IJCAI '26},
+  title = {FedAMB: Adaptive Modality Balancing for Dominance-Robust Multimodal Federated Distillation},
+  author = {Han, Seungjin and Lee, Juyeob and Lee, Sangmin and Park, Eunil},
+  year = {2026},
+  venue = {IJCAI '26},
 }
 
 @article{lee2026leveraging,
-  title         = {Leveraging Gated Architectures for Enhanced Long-term Dependency Learning in Non-attributed Graphs},
-  author        = {Lee, Juyeob and Lee, Donggeun and An, Chaehee and Park, Eunil},
-  journal       = {Knowledge-Based Systems},
-  year          = {2026},
-  index         = {SCIE, JCR 2025 IF=8.0, Q1 in Computer Science, Artificial Intelligence},
+  title = {Leveraging Gated Architectures for Enhanced Long-term Dependency Learning in Non-attributed Graphs},
+  author = {Lee, Juyeob and Lee, Donggeun and An, Chaehee and Park, Eunil},
+  journal = {Knowledge-Based Systems},
+  year = {2026},
+  index = {SCIE, JCR 2025 IF=8.0, Q1 in Computer Science, Artificial Intelligence},
 }
 
 @article{lee2026survey,
-  title         = {A Survey of Fake News Detection: A Comprehensive Review of Multimodal Approaches},
-  author        = {Lee, Juyeob and Cha, Junyeop and Park, Minsu and Lee, Minyoung and Kim, Taeeun and Choi, Seul-Ki and del Pobil, Angel P. and Park, Eunil},
-  journal       = {Data \& Knowledge Engineering},
-  year          = {2026},
-  index         = {SCIE, JCR 2025 IF=3.9, Q2 in Computer Science, Information Systems},
-  equal         = {Lee, Juyeob and Cha, Junyeop and Park, Minsu and Lee, Minyoung},
+  title = {A Survey of Fake News Detection: A Comprehensive Review of Multimodal Approaches},
+  author = {Lee, Juyeob and Cha, Junyeop and Park, Minsu and Lee, Minyoung and Kim, Taeeun and Choi, Seul-Ki and del Pobil, Angel P. and Park, Eunil},
+  journal = {Data \& Knowledge Engineering},
+  year = {2026},
+  index = {SCIE, JCR 2025 IF=3.9, Q2 in Computer Science, Information Systems},
+  equal = {Lee, Juyeob and Cha, Junyeop and Park, Minsu and Lee, Minyoung},
 }
 
 @article{cho2026understanding,
-  title         = {Understanding User Preferences through Social Media: Leveraging Semantic-Enriched Contrastive Learning for Enhanced Travel Recommendations},
-  author        = {Cho, Heejung and Lee, Juyeob and Cervera, Enric and del Pobil, Angel P. and Park, Eunil},
-  journal       = {Behaviour \& Information Technology},
-  year          = {2026},
-  index         = {SSCI, JCR 2025 IF=4.2, Q1 in Ergonomics},
+  title = {Understanding User Preferences through Social Media: Leveraging Semantic-Enriched Contrastive Learning for Enhanced Travel Recommendations},
+  author = {Cho, Heejung and Lee, Juyeob and Cervera, Enric and del Pobil, Angel P. and Park, Eunil},
+  journal = {Behaviour \& Information Technology},
+  year = {2026},
+  index = {SSCI, JCR 2025 IF=4.2, Q1 in Ergonomics},
 }
 
 @inproceedings{zheng2026clipsegfusion,
-  title         = {Clip-SegFusion: An Attention-Guided Feature Fusion Framework for Multi-Level Detection on AI-Generated Artworks},
-  author        = {Zheng, Yuqian and Ahn, Hyeongjin and Lee, Juyeob and Park, Eunil},
-  year          = {2026},
-  venue         = {ICMR '26},
+  title = {Clip-SegFusion: An Attention-Guided Feature Fusion Framework for Multi-Level Detection on AI-Generated Artworks},
+  author = {Zheng, Yuqian and Ahn, Hyeongjin and Lee, Juyeob and Park, Eunil},
+  year = {2026},
+  venue = {ICMR '26},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
 @inproceedings{lee2026enhancing,
-  title         = {Enhancing Graph Neural Networks with Adaptive Relation Learning via Variational Inference},
-  author        = {Lee, Juyeob and Jeong, Yunho and Kim, Serin and Han, Dayeon and Park, Eunil},
-  year          = {2026},
-  venue         = {PAKDD '26},
+  title = {Enhancing Graph Neural Networks with Adaptive Relation Learning via Variational Inference},
+  author = {Lee, Juyeob and Jeong, Yunho and Kim, Serin and Han, Dayeon and Park, Eunil},
+  year = {2026},
+  venue = {PAKDD '26},
 }
 
 @inproceedings{ji2026revealing,
-  title         = {Revealing Deception through Cognitive Load: A Multimodal Audio-Visual Approach},
-  author        = {Ji, Hyeonbin and Lee, Minyoung and Lee, Juyeob and Yang, Jufeng and Park, Eunil},
-  year          = {2026},
-  venue         = {SAC '26},
+  title = {Revealing Deception through Cognitive Load: A Multimodal Audio-Visual Approach},
+  author = {Ji, Hyeonbin and Lee, Minyoung and Lee, Juyeob and Yang, Jufeng and Park, Eunil},
+  year = {2026},
+  venue = {SAC '26},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
 @inproceedings{song2026mars,
-  title         = {MARs: Multi-Scale Convolution-Attention Residual Fusion for Video Summarization},
-  author        = {Song, Joonseok and Lee, Juyeob and Park, Eunil},
-  year          = {2026},
-  venue         = {MMSys '26},
+  title = {MARs: Multi-Scale Convolution-Attention Residual Fusion for Video Summarization},
+  author = {Song, Joonseok and Lee, Juyeob and Park, Eunil},
+  year = {2026},
+  venue = {MMSys '26},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
 @inproceedings{ji2026alignment,
-  title         = {Alignment and Distillation: A Robust Framework for Multimodal Domain Generalizable Human Action Recognition},
-  author        = {Ji, Hyeonbin and Lee, Juyeob and Park, Eunil},
-  year          = {2026},
-  venue         = {WACV '26},
+  title = {Alignment and Distillation: A Robust Framework for Multimodal Domain Generalizable Human Action Recognition},
+  author = {Ji, Hyeonbin and Lee, Juyeob and Park, Eunil},
+  year = {2026},
+  venue = {WACV '26},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
 @article{han2026towards,
-  title         = {Towards Objective Heart Disease Classification: A Deep Neural Network Approach for Comprehensive Diagnosis},
-  author        = {Han, Seunghee and Lee, Juyeob and Park, Eunil},
-  journal       = {Biomedical Signal Processing and Control},
-  year          = {2026},
-  index         = {SCIE, JCR 2023 IF=4.9, Q1 in Engineering, Biomedical},
-  equal         = {Han, Seunghee and Lee, Juyeob},
+  title = {Towards Objective Heart Disease Classification: A Deep Neural Network Approach for Comprehensive Diagnosis},
+  author = {Han, Seunghee and Lee, Juyeob and Park, Eunil},
+  journal = {Biomedical Signal Processing and Control},
+  year = {2026},
+  index = {SCIE, JCR 2023 IF=4.9, Q1 in Engineering, Biomedical},
+  equal = {Han, Seunghee and Lee, Juyeob},
 }
 
 
 % ----------------------------- 2025 -----------------------------
 
 @article{lee2025tfblender,
-  title         = {TFBlender: a hybrid time series attention model with data-driven macroeconomic perspectives for ELS Knock-In prediction},
-  author        = {Lee, Kyungjun and Lee, Juyeob and Park, Eunil},
-  journal       = {Journal of Big Data},
-  year          = {2025},
-  index         = {SCIE, JCR 2023 IF=8.6, Q1 in Computer Science, Theory \& Methods},
+  title = {TFBlender: a hybrid time series attention model with data-driven macroeconomic perspectives for ELS Knock-In prediction},
+  author = {Lee, Kyungjun and Lee, Juyeob and Park, Eunil},
+  journal = {Journal of Big Data},
+  year = {2025},
+  index = {SCIE, JCR 2023 IF=8.6, Q1 in Computer Science, Theory \& Methods},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
 @inproceedings{lee2025cost,
-  title         = {Cost-Effective High-Speed DRAM Testing: Circuit-Level Enhancements with DLL-Based Clock Multiplication and ECC},
-  author        = {Lee, Kyungjun and Lee, Juyeob and Park, Eunil},
-  year          = {2025},
-  venue         = {ICICDT '25},
+  title = {Cost-Effective High-Speed DRAM Testing: Circuit-Level Enhancements with DLL-Based Clock Multiplication and ECC},
+  author = {Lee, Kyungjun and Lee, Juyeob and Park, Eunil},
+  year = {2025},
+  venue = {ICICDT '25},
 }
 
 @article{lim2025vicap,
-  title         = {ViCap-AD: video caption-based weakly supervised video anomaly detection},
-  author        = {Lim, Junwoo and Lee, Juyeob and Kim, Hyunji and Park, Eunil},
-  journal       = {Machine Vision and Applications},
-  year          = {2025},
-  index         = {SCIE, JCR 2023 IF=2.4, Q2 in Computer Science, Cybernetics},
+  title = {ViCap-AD: video caption-based weakly supervised video anomaly detection},
+  author = {Lim, Junwoo and Lee, Juyeob and Kim, Hyunji and Park, Eunil},
+  journal = {Machine Vision and Applications},
+  year = {2025},
+  index = {SCIE, JCR 2023 IF=2.4, Q2 in Computer Science, Cybernetics},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
@@ -163,38 +166,38 @@
 % ----------------------------- 2024 -----------------------------
 
 @article{lim2024enhancing,
-  title         = {Enhancing Real-Time Traffic Volume Prediction: A Two-Step Approach of Object Detection and Time Series Modelling},
-  author        = {Lim, Junwoo and Lee, Juyeob and An, Chaehee and Park, Eunil},
-  journal       = {IET Intelligent Transport Systems},
-  year          = {2024},
-  index         = {SCIE, JCR 2023 IF=2.3, Q2 in Engineering, Electrical \& Electronic},
+  title = {Enhancing Real-Time Traffic Volume Prediction: A Two-Step Approach of Object Detection and Time Series Modelling},
+  author = {Lim, Junwoo and Lee, Juyeob and An, Chaehee and Park, Eunil},
+  journal = {IET Intelligent Transport Systems},
+  year = {2024},
+  index = {SCIE, JCR 2023 IF=2.3, Q2 in Engineering, Electrical \& Electronic},
   corresponding = {Lee, Juyeob and Park, Eunil},
 }
 
 @article{lee2024automated,
-  title         = {Automated vehicle damage classification using the three-quarter view car damage dataset and deep learning approaches},
-  author        = {Lee, Donggeun and Lee, Juyeob and Park, Eunil},
-  journal       = {Heliyon},
-  year          = {2024},
-  index         = {SCIE, JCR 2023 IF=3.4, Q1 in Multidisciplinary Sciences},
+  title = {Automated vehicle damage classification using the three-quarter view car damage dataset and deep learning approaches},
+  author = {Lee, Donggeun and Lee, Juyeob and Park, Eunil},
+  journal = {Heliyon},
+  year = {2024},
+  index = {SCIE, JCR 2023 IF=3.4, Q1 in Multidisciplinary Sciences},
   corresponding = {Park, Eunil},
   % TODO: 데이터셋 링크  dataset = {https://...},
 }
 
 @article{park2024solving,
-  title         = {Solving Inverse Problems using Normalizing Flow Prior: Application to Optical Spectra},
-  author        = {Park, Junhyun and Lee, Juyeob and Hwang, Jungseek},
-  journal       = {Physical Review B},
-  year          = {2024},
-  index         = {SCIE, JCR 2023 IF=3.2, Q2 in Physics, Applied},
+  title = {Solving Inverse Problems using Normalizing Flow Prior: Application to Optical Spectra},
+  author = {Park, Junhyun and Lee, Juyeob and Hwang, Jungseek},
+  journal = {Physical Review B},
+  year = {2024},
+  index = {SCIE, JCR 2023 IF=3.2, Q2 in Physics, Applied},
   corresponding = {Hwang, Jungseek},
 }
 
 @inproceedings{lee2024ggcu,
-  title         = {GGCU: Reviving Gate Mechanism in GNNs with Non-Attributed Graphs},
-  author        = {Lee, Juyeob and Lee, Donggeun and An, Chaehee and Park, Eunil},
-  year          = {2024},
-  venue         = {AAAI-W '24 (GCLR)},
+  title = {GGCU: Reviving Gate Mechanism in GNNs with Non-Attributed Graphs},
+  author = {Lee, Juyeob and Lee, Donggeun and An, Chaehee and Park, Eunil},
+  year = {2024},
+  venue = {AAAI-W '24 (GCLR)},
   corresponding = {Park, Eunil},
 }
 
@@ -202,19 +205,19 @@
 % ----------------------------- 2022 -----------------------------
 
 @inproceedings{lee2022development,
-  title         = {Development of AI-based Anomaly Detection Technology Model: the Case of Underground Facilities},
-  title_ko      = {AI를 적용한 구조물 이상탐지 기술 개발: 지하매설시설을 중심으로},
-  author        = {Lee, Minyoung and Lee, Juyeob and Ko, Minsam and Han, Jinyoung and Park, Eunil},
-  year          = {2022},
-  venue         = {KSCE '22},
+  title = {Development of AI-based Anomaly Detection Technology Model: the Case of Underground Facilities},
+  title_ko = {AI를 적용한 구조물 이상탐지 기술 개발: 지하매설시설을 중심으로},
+  author = {Lee, Minyoung and Lee, Juyeob and Ko, Minsam and Han, Jinyoung and Park, Eunil},
+  year = {2022},
+  venue = {KSCE '22},
   corresponding = {Park, Eunil},
 }
 
 @inproceedings{lee2022multimodal,
-  title         = {Development of a Multimodal Pipeline Diagnosis Model for Heat-transfer Pipelines},
-  title_ko      = {열수송관 이상 탐지를 위한 멀티 모달 인공지능 모델},
-  author        = {Lee, Minyoung and Lee, Juyeob and Kim, Hyunji and Lee, Jinsoo and Park, Minsu and An, Chaehee and Lim, Junwoo and Han, Seunghee and Lee, Hongcheol and Hwang, Inju and Kim, Yeonho and Park, Eunil},
-  year          = {2022},
-  venue         = {KSC '22},
+  title = {Development of a Multimodal Pipeline Diagnosis Model for Heat-transfer Pipelines},
+  title_ko = {열수송관 이상 탐지를 위한 멀티 모달 인공지능 모델},
+  author = {Lee, Minyoung and Lee, Juyeob and Kim, Hyunji and Lee, Jinsoo and Park, Minsu and An, Chaehee and Lim, Junwoo and Han, Seunghee and Lee, Hongcheol and Hwang, Inju and Kim, Yeonho and Park, Eunil},
+  year = {2022},
+  venue = {KSC '22},
   corresponding = {Park, Eunil},
 }

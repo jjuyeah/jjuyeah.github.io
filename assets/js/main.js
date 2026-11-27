@@ -160,9 +160,18 @@
     return out.join('\n');
   }
 
+  // doi = {10.xxxx/...} → https://doi.org/10.xxxx/...
+  // ("https://doi.org/...", "doi:..." 처럼 앞에 붙은 것도 허용)
+  function doiUrl(doi) {
+    doi = latexToText(doi || '').replace(/^(https?:\/\/(dx\.)?doi\.org\/|doi:\s*)/i, '').trim();
+    if (!/^10\.\d{4,}\/\S+$/.test(doi)) return '';
+    return 'https://doi.org/' + doi.split('/').map(encodeURIComponent).join('/');
+  }
+
   function renderEntry(f, self) {
     var title = escapeHtml(latexToText(f.title));
-    var url = safeUrl(f.url || '');
+    // 제목 링크: url 이 있으면 url, 없으면 doi
+    var url = safeUrl(f.url || '') || doiUrl(f.doi);
     var corr = splitNames(f.corresponding).map(nameKey);
     var equal = splitNames(f.equal).map(nameKey);
 

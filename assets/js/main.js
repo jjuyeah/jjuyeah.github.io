@@ -161,9 +161,9 @@
   }
 
   // doi = {10.xxxx/...} → https://doi.org/10.xxxx/...
-  // ("https://doi.org/...", "doi:..." 처럼 앞에 붙은 것도 허용)
+  // ("https://doi.org/...", "doi.org/...", "doi:..." 처럼 앞에 붙은 것도 허용)
   function doiUrl(doi) {
-    doi = latexToText(doi || '').replace(/^(https?:\/\/(dx\.)?doi\.org\/|doi:\s*)/i, '').trim();
+    doi = latexToText(doi || '').replace(/^((https?:\/\/)?(dx\.)?doi\.org\/|doi:\s*)/i, '').trim();
     if (!/^10\.\d{4,}\/\S+$/.test(doi)) return '';
     return 'https://doi.org/' + doi.split('/').map(encodeURIComponent).join('/');
   }

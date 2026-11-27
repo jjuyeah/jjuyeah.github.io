@@ -29,8 +29,7 @@ files/                   # CV 등 PDF 파일 (예: files/cv.pdf)
 - **논문 추가**: `sections/publications.html` 의 해당 연도 `<ul class="pubs">` 안에 기존 `<li>` 하나를 복사해서 수정. 본인 이름은 `<b>Juyeob Lee</b>`, 교신저자 `*`, 공동 1저자 `#`.
 - **아직 채우지 않은 링크**: `data-todo` 로 검색 → 실제 URL로 바꾸고 `data-todo` 삭제.
 - **섹션 추가/삭제/순서 변경**: `index.html` 의 `<section id="..." data-src="sections/....html">` 와 상단 메뉴(`nav-links`)를 함께 수정.
-- **프로필(사진·이름·이메일·Scholar)**: `index.html` 의 `<aside class="sidebar">`.
-  사진은 `assets/img/profile.jpg` 로 넣고 `<img src>` 변경.
+- **프로필(사진·이름·이메일·Scholar)**: `index.html` 의 `<aside class="sidebar">`. 사진 파일은 `assets/img/profile.jpg` (정사각형 권장).
 
 ## 로컬 미리보기
 

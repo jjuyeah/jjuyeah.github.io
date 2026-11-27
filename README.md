@@ -12,10 +12,10 @@ sections/                # ← 섹션별 내용. 평소에는 여기만 수정
   about.html
   education.html
   experience.html
-  publications.html
+  publications.bib       # 논문 목록 (BibTeX)
   projects.html
   teaching.html
-assets/js/main.js        # sections/*.html 불러오기, 메뉴 스크롤/강조
+assets/js/main.js        # sections/* 불러오기, BibTeX → 논문 목록 변환, 메뉴 스크롤/강조
 assets/css/style.css     # 스타일 (색상은 맨 위 :root 변수에서 변경, 다크 모드 자동 지원)
 assets/img/              # 프로필 사진, 파비콘
 files/                   # CV 등 PDF 파일 (예: files/cv.pdf)
@@ -26,8 +26,10 @@ files/                   # CV 등 PDF 파일 (예: files/cv.pdf)
 ## 내용 수정
 
 - **섹션 내용**: `sections/<이름>.html` 을 수정합니다. 각 파일 맨 위 주석에 작성 형식이 적혀 있습니다.
-- **논문 추가**: `sections/publications.html` 의 해당 연도 `<ul class="pubs">` 안에 기존 `<li>` 하나를 복사해서 수정. 본인 이름은 `<b>Juyeob Lee</b>`, 교신저자 `*`, 공동 1저자 `#`.
-- **아직 채우지 않은 링크**: `data-todo` 로 검색 → 실제 URL로 바꾸고 `data-todo` 삭제.
+- **논문 추가**: `sections/publications.bib` 에 BibTeX 항목을 추가합니다 (Google Scholar 등에서 복사).
+  연도별 묶기·최신순 정렬·본인 이름 굵게는 자동입니다. 같은 연도 안에서는 파일에 적힌 순서대로 표시됩니다.
+  화면 표시용 추가 필드(`url`, `venue`, `index`, `corresponding`, `equal`, `title_ko`, `dataset`) 설명은 파일 맨 위 주석에 있습니다.
+- **논문 링크**: 해당 BibTeX 항목에 `url = {https://...}` 를 넣으면 제목이 링크가 됩니다.
 - **섹션 추가/삭제/순서 변경**: `index.html` 의 `<section id="..." data-src="sections/....html">` 와 상단 메뉴(`nav-links`)를 함께 수정.
 - **프로필(사진·이름·이메일·Scholar)**: `index.html` 의 `<aside class="sidebar">`. 사진 파일은 `assets/img/profile.jpg` (정사각형 권장).
 

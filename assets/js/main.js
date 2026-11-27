@@ -137,13 +137,19 @@
     var self = (section.getAttribute('data-self') || '').split('|').map(function (s) { return nameKey(s); });
 
     // 연도별로 묶기 (같은 연도 안에서는 파일 순서 유지)
+    // status = {accepted} 인 논문은 연도 대신 맨 위 [Accepted] 그룹으로
+    var ACCEPTED = 'Accepted';
     var byYear = {}, years = [];
     entries.forEach(function (e) {
-      var y = (e.fields.year || 'Other').trim();
+      var accepted = /^\s*accepted\s*$/i.test(e.fields.status || '');
+      var y = accepted ? ACCEPTED : (e.fields.year || 'Other').trim();
       if (!byYear[y]) { byYear[y] = []; years.push(y); }
       byYear[y].push(e);
     });
-    years.sort(function (a, b) { return (parseInt(b, 10) || 0) - (parseInt(a, 10) || 0); });
+    years.sort(function (a, b) {
+      if (a === ACCEPTED || b === ACCEPTED) return a === ACCEPTED ? -1 : 1;
+      return (parseInt(b, 10) || 0) - (parseInt(a, 10) || 0);
+    });
 
     var out = ['<p class="note">(* = (co-)corresponding author, # = equally contributions)</p>'];
     years.forEach(function (y) {
